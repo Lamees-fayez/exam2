@@ -13,28 +13,27 @@ class Employee:
 employees=[]
         
 def add_employee(name,age,salary):
-    add=Employee(name,age,salary)
-    self.employees.append(add)
+    employees.append(Employee(name,age,salary))
     print(f'{name} has been added')
-def display_employees(self):
-    print(Employee(self.employees))
-def up_date_employee(self,name,new_salary=None,new_age=None):
-    for employee in self.employees:
+def display_employees():
+    print(employees)
+def up_date_employee(name,new_salary=None,new_age=None):
+    for employee in employees:
         if employee.name==name:
             if new_salary is not None:
                 employee.salary=new_salary
             if new_age is not None:
                 employee.age=new_age
                 print(f'{employee.name} has been updated')
-def delete_employee(self,name):
-    for employee in self.employees:
+def delete_employee(name):
+    for employee in employees:
         if employee.name==name:
-            self.employees.remove(employee) 
+            employees.remove(employee) 
             print(f'{employee.name} has been deleted')  
-def from_age(self,min_age,max_age):
-    for employee in self.employees:
+def from_age(min_age,max_age):
+    for employee in employees:
         if employee.age>=min_age and employee.age<=max_age:
-            self.employees.remove(employee)
+            employees.remove(employee)
             print('Employees has been deleted')   
 while True:
     print('1.Add Employee')

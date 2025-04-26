@@ -12,7 +12,7 @@ class Employee:
     
 employees=[]
         
-def add_employee(self,name,age,salary):
+def add_employee(name,age,salary):
     add=Employee(name,age,salary)
     self.employees.append(add)
     print(f'{name} has been added')

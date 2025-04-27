@@ -6,7 +6,7 @@ class Employee:
         self.salary=salary
            
     def __str__(self):
-        print( f'{self.name} is {self.age} years old and has a salary of {self.salary}')
+        return f'{self.name} is {self.age} years old and has a salary of {self.salary}'
 
 
     
@@ -16,7 +16,8 @@ def add_employee(name,age,salary):
     employees.append(Employee(name,age,salary))
     print(f'{name} has been added')
 def display_employees():
-    print(employees)
+    for employee in employees:
+        print(employee)
 def up_date_employee(name,new_salary=None,new_age=None):
     for employee in employees:
         if employee.name==name:
